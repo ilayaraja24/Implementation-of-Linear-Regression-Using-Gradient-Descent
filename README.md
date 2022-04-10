@@ -33,7 +33,6 @@ Program to implement the linear regression using gradient descent.
 Developed by: ILAYARAJA.M
 RegisterNumber:212221040057  
 */
-```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
