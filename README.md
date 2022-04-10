@@ -34,6 +34,7 @@ Developed by: ILAYARAJA.M
 RegisterNumber:212221040057  
 */
 ```
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 data=pd.read_csv("/content/student_scores - student_scores.csv")
@@ -49,23 +50,24 @@ c=0
 l=0.001
 loss=[]
 for i in range(10000):
-  ypred=m*x+c
-  MSE=(1/n)*sum((ypred-y)*2)
-  dm=(2/n)*sum(x*(ypred-y))
-  dc=(2/n)*sum(ypred-y)
-  c=c-l*dc
-  m=m-l*dm
-  loss.append(MSE)
-  #print(m,c)
-  y_pred=m*x+c
-plt.scatter(x,y,color="red")
-plt.plot(x,y_pred)
-plt.xlabel ("study hours")
+    ypred=m*x+c
+    MSE=(1/n)*sum((ypred-y)*2)
+    dm=(2/n)*sum(x*(ypred-y))
+    dc=(2/n)*sum(ypred-y)
+    c=c-l*dc
+    m=m-l*dm
+    loss.append(MSE)
+    #print(m,c)
+    ypred=m*x+c
+plt.scatter(x,y,color="blue")
+plt.plot(x,ypred)
+plt.xlabel("study hours")
 plt.ylabel("scores")
-plt.title("study hours vs scores")
+plt.title("study hour vs scores")
 plt.plot(loss)
 plt.xlabel("iteration")
 plt.ylabel("loss")
+```
 
 
 
